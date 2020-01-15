@@ -25,7 +25,7 @@ class FeeCalculator:
         for vOutput in trx['vout']:
             if outputIndex == itr:
                 return vOutput['value']
-        itr += itr
+            itr = itr + 1
 
     def __getTransaction(self, trxId):
         rawTrx = self.__rawProxy.getrawtransaction(trxId)
